@@ -2,6 +2,8 @@
 // All page content remains accessible without JavaScript.
 const menu = document.querySelector('.menu-toggle');
 const navigation = document.getElementById('primary-nav');
+const toolsMenu = navigation?.querySelector('.nav-tools');
+const closeTools = () => { if (toolsMenu) toolsMenu.open = false; };
 if (menu && navigation) {
   document.documentElement.classList.add('js');
   menu.hidden = false;
@@ -9,19 +11,47 @@ if (menu && navigation) {
     menu.setAttribute('aria-expanded', String(open));
     navigation.classList.toggle('is-open', open);
     menu.querySelector('span').textContent = open ? '−' : '+';
+    if (!open) closeTools();
   };
   menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
   navigation.addEventListener('click', (event) => {
     if (event.target.closest('a')) setMenu(false);
   });
   document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && toolsMenu?.open) {
+      closeTools();
+      toolsMenu.querySelector('summary').focus();
+      event.preventDefault();
+      return;
+    }
     if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
       setMenu(false);
       menu.focus();
     }
   });
-  window.matchMedia('(min-width: 1001px)').addEventListener('change', (event) => {
+  window.matchMedia('(min-width: 1151px)').addEventListener('change', (event) => {
+    closeTools();
     if (event.matches) setMenu(false);
+  });
+}
+if (toolsMenu) {
+  const canHover = window.matchMedia('(hover: hover) and (min-width: 1151px)');
+  toolsMenu.addEventListener('pointerenter', () => { if (canHover.matches) toolsMenu.open = true; });
+  toolsMenu.addEventListener('pointerleave', () => {
+    if (canHover.matches && !toolsMenu.contains(document.activeElement)) closeTools();
+  });
+  toolsMenu.addEventListener('focusout', (event) => {
+    if (!toolsMenu.contains(event.relatedTarget)) closeTools();
+  });
+  toolsMenu.addEventListener('keydown', (event) => {
+    if (event.target.tagName === 'SUMMARY' && event.key === 'ArrowDown') {
+      event.preventDefault();
+      toolsMenu.open = true;
+      toolsMenu.querySelector('a').focus();
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (!toolsMenu.contains(event.target)) closeTools();
   });
 }
 const year = document.getElementById('year');

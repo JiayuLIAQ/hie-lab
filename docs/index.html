@@ -19,8 +19,8 @@
   <meta property="og:image:alt" content="HiE Lab: a blue architectural H, orange person-shaped i and green leaf-shaped e">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="assets/hie-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261115-selected-default">
-  <script src="main.js?v=20261115-selected-default" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261115-tools">
+  <script src="main.js?v=20261115-tools" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,7 +63,17 @@
       </div>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" hidden>Menu <span aria-hidden="true">+</span></button>
       <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-        <a href="#about">About</a><a href="#research">Research</a><a href="#people">People</a><a href="#publications">Publications</a><a class="nav-contact" href="#join">Join us <span aria-hidden="true">↗</span></a>
+        <a href="#about">About</a><a href="#research">Research</a><a href="#people">People</a>
+        <details class="nav-tools">
+          <summary>Tools <span class="tools-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="tools-dropdown">
+            <a class="tools-overview" href="#tools">All tools <span aria-hidden="true">→</span></a>
+            <a href="tools/clear-air-sg/" target="_blank" rel="noopener noreferrer">Clear Air SG<small>Haze &amp; air cleaner sizing</small></a>
+            <a href="https://jiayuli.shinyapps.io/fan_infectious_aerosols/" target="_blank" rel="noopener noreferrer">Fans &amp; Infection Risk<small>Airborne infection risk calculator</small></a>
+            <a href="https://cbe-berkeley.shinyapps.io/airpurifier/" target="_blank" rel="noopener noreferrer">Portable Air Cleaner Calculator<small>Effectiveness &amp; number of units</small></a>
+          </div>
+        </details>
+        <a href="#publications">Publications</a><a class="nav-contact" href="#join">Join us <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -224,9 +234,34 @@
       </div>
     </section>
 
+    <section class="section wrap tools" id="tools" aria-labelledby="tools-title">
+      <h2 class="eyebrow" id="tools-title">05 / Tools</h2>
+      <p class="tools-intro">Interactive tools for exploring air quality, air cleaning and airborne infection risk.</p>
+      <ul class="tool-list">
+        <li>
+          <p class="tool-topic">Singapore haze</p>
+          <h3>Clear Air SG</h3>
+          <p class="tool-description">Size air cleaners for Singapore haze, explore PM2.5 and ventilation scenarios, and check current regional NEA observations. Available in English and Chinese.</p>
+          <a class="tool-link" href="tools/clear-air-sg/" target="_blank" rel="noopener noreferrer">Open Clear Air SG <span aria-hidden="true">↗</span></a>
+        </li>
+        <li>
+          <p class="tool-topic">Fans &amp; infectious aerosols</p>
+          <h3>Fans &amp; Infection Risk</h3>
+          <p class="tool-description">Explore how fan use affects airborne infection risk under different ventilation, exposure and mask scenarios, considering occupants at short and long range.</p>
+          <a class="tool-link" href="https://jiayuli.shinyapps.io/fan_infectious_aerosols/" target="_blank" rel="noopener noreferrer">Open fan risk calculator <span aria-hidden="true">↗</span></a>
+        </li>
+        <li>
+          <p class="tool-topic">Portable air cleaning</p>
+          <h3>Portable Air Cleaner Calculator</h3>
+          <p class="tool-description">Estimate air cleaner effectiveness or the number of units needed using room size, ventilation rate and clean air delivery rate (CADR).</p>
+          <a class="tool-link" href="https://cbe-berkeley.shinyapps.io/airpurifier/" target="_blank" rel="noopener noreferrer">Open PAC calculator <span aria-hidden="true">↗</span></a>
+        </li>
+      </ul>
+    </section>
+
     <section class="section wrap publications" id="publications" aria-labelledby="publications-title">
       <div class="publications-heading">
-        <div><h2 class="eyebrow" id="publications-title">05 / Publications</h2><p class="publications-intro">Publications by Jiayu Li and collaborators, including work before <span class="hie-wordmark">H<span class="hie-wordmark-i">i</span>E</span> was established at NUS.</p></div>
+        <div><h2 class="eyebrow" id="publications-title">06 / Publications</h2><p class="publications-intro">Publications by Jiayu Li and collaborators, including work before <span class="hie-wordmark">H<span class="hie-wordmark-i">i</span>E</span> was established at NUS.</p></div>
         <a class="text-link" href="https://scholar.google.com/citations?user=yG-ViIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
       </div>
       <div class="publication-controls" hidden>
@@ -801,7 +836,7 @@
 
     <section class="join-band" id="join" aria-labelledby="join-title">
       <div class="wrap join-layout">
-        <div><p class="eyebrow">06 / Join <span class="hie-wordmark">H<span class="hie-wordmark-i">i</span>E</span></p><h2 id="join-title">Good questions.<br>Better environments.</h2><p class="join-intro">We welcome curious researchers who want to connect physical understanding with practical environmental improvements.</p></div>
+        <div><p class="eyebrow">07 / Join <span class="hie-wordmark">H<span class="hie-wordmark-i">i</span>E</span></p><h2 id="join-title">Good questions.<br>Better environments.</h2><p class="join-intro">We welcome curious researchers who want to connect physical understanding with practical environmental improvements.</p></div>
         <div class="join-content"><p class="opening">PhD opportunities · August 2027</p><h3>1–2 fully funded positions</h3><p>We welcome applicants from building science, mechanical and environmental engineering, fluid mechanics, energy, sensing, computation and related fields.</p><p>Send your CV, academic transcripts and a short statement of research interests to Jiayu. Funding covers tuition fees and a living stipend, subject to NUS admission and scholarship procedures.</p><a class="contact-link" href="mailto:jy.li@nus.edu.sg?subject=HiE%20PhD%202027%20%E2%80%93%20Name%20%E2%80%93%20Institution">jy.li@nus.edu.sg <span aria-hidden="true">↗</span></a><div class="join-links"><a href="https://cde.nus.edu.sg/graduate/graduate-programmes-by-research/how-to-apply/" target="_blank" rel="noopener noreferrer">NUS application guidance ↗</a></div><p class="collaboration-note">Interested in a research visit or collaboration? We would be glad to hear about your ideas.</p></div>
       </div>
     </section>
