@@ -42,10 +42,10 @@ if (publications) {
   const moreControls = publications.querySelector('.publication-more');
   const viewButtons = Array.from(publications.querySelectorAll('[data-publication-view]'));
   const selectedCount = cards.filter((card) => card.dataset.selected === 'true').length;
-  const selected = { topics: new Set(), methods: new Set(), type: new Set() };
+  const selected = { topics: new Set(), methods: new Set() };
   const batchSize = 8;
-  let selectedOnly = false;
-  let visibleLimit = batchSize;
+  let selectedOnly = true;
+  let visibleLimit = Infinity;
   let matching = [];
 
   const renderPublications = () => {
@@ -71,7 +71,7 @@ if (publications) {
       ? `No matching publications · ${selectedOnly ? `${selectedCount} selected` : cards.length} in total`
       : `Showing ${shown} of ${matching.length}${activeFilters ? ' matching' : ''}${selectedOnly ? ' selected' : ''} publications · Newest first`;
     empty.hidden = matching.length > 0;
-    reset.disabled = !selectedOnly && !activeFilters;
+    reset.disabled = selectedOnly && !activeFilters;
     moreControls.hidden = shown >= matching.length;
     more.firstChild.textContent = `Show ${Math.min(batchSize, matching.length - shown)} more `;
   };
@@ -98,8 +98,8 @@ if (publications) {
   });
   reset.addEventListener('click', () => {
     Object.values(selected).forEach((values) => values.clear());
-    selectedOnly = false;
-    visibleLimit = batchSize;
+    selectedOnly = true;
+    visibleLimit = Infinity;
     renderPublications();
     viewButtons[0].focus({ preventScroll: true });
   });

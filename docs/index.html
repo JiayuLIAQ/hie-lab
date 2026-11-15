@@ -19,8 +19,8 @@
   <meta property="og:image:alt" content="HiE Lab: a blue architectural H, orange person-shaped i and green leaf-shaped e">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="assets/hie-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js?v=20261115-selected" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261115-selected-default">
+  <script src="main.js?v=20261115-selected-default" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -233,8 +233,8 @@
         <fieldset class="publication-filter-group" id="publication-view">
           <legend>Publication list</legend>
           <div class="filter-buttons">
-            <button type="button" class="filter-button" data-publication-view="all" aria-pressed="true" aria-controls="publication-list">All publications</button>
-            <button type="button" class="filter-button" data-publication-view="selected" aria-pressed="false" aria-controls="publication-list">Selected</button>
+            <button type="button" class="filter-button" data-publication-view="selected" aria-pressed="true" aria-controls="publication-list">Selected publications</button>
+            <button type="button" class="filter-button" data-publication-view="all" aria-pressed="false" aria-controls="publication-list">All publications</button>
           </div>
         </fieldset>
         <p class="filter-hint" id="publication-filter-hint">Select topics and methods to explore our work. You can select more than one in each group.</p>
@@ -247,14 +247,9 @@
           <div class="filter-buttons"><button type="button" class="filter-button" data-filter="all" aria-pressed="true" aria-controls="publication-list">All</button><button type="button" class="filter-button" data-filter="field" aria-pressed="false" aria-controls="publication-list">Field study</button><button type="button" class="filter-button" data-filter="chamber" aria-pressed="false" aria-controls="publication-list">Lab / chamber study</button><button type="button" class="filter-button" data-filter="simulation" aria-pressed="false" aria-controls="publication-list">Numerical simulation</button><button type="button" class="filter-button" data-filter="analysis" aria-pressed="false" aria-controls="publication-list">Data analysis &amp; modelling</button><button type="button" class="filter-button" data-filter="review" aria-pressed="false" aria-controls="publication-list">Review &amp; perspective</button></div>
         </fieldset>
         <div class="publication-toolbar">
-          <fieldset class="publication-type-filter" data-filter-group="type"><legend>Publication type</legend><div class="filter-buttons">
-            <button type="button" class="filter-button" data-filter="all" aria-pressed="true" aria-controls="publication-list">All types</button>
-            <button type="button" class="filter-button" data-filter="journal" aria-pressed="false" aria-controls="publication-list">Journal articles</button>
-            <button type="button" class="filter-button" data-filter="conference" aria-pressed="false" aria-controls="publication-list">Conference papers</button>
-          </div></fieldset>
+          <p class="publication-count" id="publication-count" role="status" aria-live="polite" aria-atomic="true"></p>
           <button type="button" class="filter-reset" id="publication-reset" disabled>Clear filters</button>
         </div>
-        <p class="publication-count" id="publication-count" role="status" aria-live="polite" aria-atomic="true"></p>
       </div>
       <ol class="paper-list" id="publication-list" aria-label="Publications, newest first">
         <li id="paper-j57" data-selected="true" data-topics="cooling comfort" data-methods="review" data-type="journal" tabindex="-1">
