@@ -173,7 +173,7 @@ a.member-card:hover .member-name{text-decoration:underline;text-underline-offset
 .footer-identity{display:flex;align-items:center;gap:24px}
 .footer-identity>img{width:120px}
 .footer-identity p{font-size:15px;font-weight:600;line-height:1.6}
-.footer-identity p[lang]{font-size:13px;font-weight:400;color:var(--muted);margin-top:10px}
+.footer-identity p[lang]{font-size:13px;font-weight:400;color:var(--muted);margin-top:4px}
 .footer-affiliation{display:flex;justify-content:flex-end;gap:15px;align-items:center}
 .footer-affiliation img{width:115px}
 .footer-affiliation p{font-size:12px;color:var(--muted);line-height:1.9}
