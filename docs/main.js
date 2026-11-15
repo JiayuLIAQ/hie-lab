@@ -40,18 +40,24 @@ if (publications) {
   const more = document.getElementById('publication-more');
   const all = document.getElementById('publication-all');
   const moreControls = publications.querySelector('.publication-more');
+  const viewButtons = Array.from(publications.querySelectorAll('[data-publication-view]'));
+  const selectedCount = cards.filter((card) => card.dataset.selected === 'true').length;
   const selected = { topics: new Set(), methods: new Set(), type: new Set() };
   const batchSize = 8;
+  let selectedOnly = false;
   let visibleLimit = batchSize;
   let matching = [];
 
   const renderPublications = () => {
     // Any selected tag within a group; all selected groups must match.
-    matching = cards.filter((card) => Object.entries(selected).every(([group, values]) =>
+    matching = cards.filter((card) => (!selectedOnly || card.dataset.selected === 'true') && Object.entries(selected).every(([group, values]) =>
       values.size === 0 || card.dataset[group].split(' ').some((tag) => values.has(tag))
     ));
     const visible = new Set(matching.slice(0, visibleLimit));
     cards.forEach((card) => { card.hidden = !visible.has(card); });
+    viewButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String((button.dataset.publicationView === 'selected') === selectedOnly));
+    });
     groups.forEach((group) => {
       const values = selected[group.dataset.filterGroup];
       group.querySelectorAll('button[data-filter]').forEach((button) => {
@@ -59,17 +65,24 @@ if (publications) {
         button.setAttribute('aria-pressed', String(active));
       });
     });
-    const active = Object.values(selected).some((values) => values.size > 0);
+    const activeFilters = Object.values(selected).some((values) => values.size > 0);
     const shown = visible.size;
     count.textContent = matching.length === 0
-      ? `No matching publications · ${cards.length} in total`
-      : `Showing ${shown} of ${matching.length}${active ? ' matching' : ''} publications · Newest first`;
+      ? `No matching publications · ${selectedOnly ? `${selectedCount} selected` : cards.length} in total`
+      : `Showing ${shown} of ${matching.length}${activeFilters ? ' matching' : ''}${selectedOnly ? ' selected' : ''} publications · Newest first`;
     empty.hidden = matching.length > 0;
-    reset.disabled = !active;
+    reset.disabled = !selectedOnly && !activeFilters;
     moreControls.hidden = shown >= matching.length;
     more.firstChild.textContent = `Show ${Math.min(batchSize, matching.length - shown)} more `;
   };
 
+  viewButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      selectedOnly = button.dataset.publicationView === 'selected';
+      visibleLimit = selectedOnly ? Infinity : batchSize;
+      renderPublications();
+    });
+  });
   groups.forEach((group) => {
     group.addEventListener('click', (event) => {
       const button = event.target.closest('button[data-filter]');
@@ -79,15 +92,16 @@ if (publications) {
       if (value === 'all') values.clear();
       else if (values.has(value)) values.delete(value);
       else values.add(value);
-      visibleLimit = batchSize;
+      visibleLimit = selectedOnly ? Infinity : batchSize;
       renderPublications();
     });
   });
   reset.addEventListener('click', () => {
     Object.values(selected).forEach((values) => values.clear());
+    selectedOnly = false;
     visibleLimit = batchSize;
     renderPublications();
-    groups[0].querySelector('[data-filter="all"]').focus({ preventScroll: true });
+    viewButtons[0].focus({ preventScroll: true });
   });
   const revealMore = (showAll) => {
     const firstNew = matching[visibleLimit];
