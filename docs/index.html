@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HiE Lab at NUS | Healthy and Intelligent Environments</title>
+  <meta name="description" content="The Healthy and Intelligent Environments (HiE) Lab at NUS, led by Jiayu Li. Research in airflow, air quality, human exposure, low-energy cooling and intelligent environmental systems.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#003D7C">
+  <meta property="og:title" content="HiE Lab at NUS | Healthy and Intelligent Environments">
+  <meta property="og:description" content="Physics and AI for healthier and more resilient built environments. Research led by Jiayu Li at the National University of Singapore.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_SG">
+  <link rel="canonical" href="https://jiayuliaq.github.io/hie-lab/">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <meta property="og:url" content="https://jiayuliaq.github.io/hie-lab/">
+  <meta property="og:site_name" content="HiE Lab at NUS">
+  <meta property="og:image" content="https://jiayuliaq.github.io/hie-lab/assets/hie-logo.png">
+  <meta property="og:image:alt" content="HiE Lab: a blue architectural H, orange person-shaped i and green leaf-shaped e">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/hie-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "Healthy and Intelligent Environments Lab",
+    "alternateName": ["HiE Lab", "NUS HiE Lab"],
+    "url": "https://jiayuliaq.github.io/hie-lab/",
+    "logo": "https://jiayuliaq.github.io/hie-lab/assets/hie-logo.png",
+    "description": "Research on multiscale airflow, human exposure, environmental quality, low-energy cooling and intelligent environmental systems.",
+    "email": "jy.li@nus.edu.sg",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Department of the Built Environment",
+      "parentOrganization": {"@type": "CollegeOrUniversity", "name": "National University of Singapore", "url": "https://nus.edu.sg/"}
+    },
+    "member": {
+      "@type": "Person",
+      "name": "Jiayu Li",
+      "url": "https://jiayuliaq.github.io/hie-lab/people/jiayu-li.html",
+      "jobTitle": "Assistant Professor",
+      "email": "jy.li@nus.edu.sg",
+      "sameAs": ["https://orcid.org/0000-0002-5398-1151", "https://scholar.google.com/citations?user=yG-ViIwAAAAJ&hl=en"]
+    },
+    "knowsAbout": ["Indoor air quality", "Human exposure", "Airflow", "Computational fluid dynamics", "Low-energy cooling", "Environmental sensing", "Physics-assisted AI"]
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand-group">
+        <a class="university-brand" href="https://nus.edu.sg/" aria-label="National University of Singapore">
+          <img src="assets/nus-logo.svg" width="616" height="325" alt="National University of Singapore">
+        </a>
+        <a class="brand" href="#top" aria-label="Healthy and Intelligent Environments Lab home">
+          <img src="assets/hie-logo.svg" width="1292" height="626" alt="HiE">
+          <span class="brand-type">Healthy and Intelligent<br>Environments Lab</span>
+        </a>
+      </div>
+      <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" hidden>Menu <span aria-hidden="true">+</span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#research">Research</a><a href="#people">People</a><a href="#publications">Publications</a><a class="nav-contact" href="#join">Join us <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <p class="hero-identity">Healthy and Intelligent Environments <span class="hero-lab-suffix">(<span class="hie-wordmark hie-wordmark--brand">H<span class="hie-wordmark-i">i</span>E</span>) Lab</span> <span class="hero-affiliation">· NUS Department of the Built Environment</span></p>
+      <div class="hero-copy">
+        <h1 id="hero-title">Physics and AI<br>for <span>healthier</span> and<br><span>more resilient</span><br>built environments</h1>
+        <p class="hero-description">We study the air around us and the spaces we share, connecting airflow, human exposure and intelligent environmental systems.</p>
+        <a class="button" href="#research">Explore our research <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="hero-figure">
+        <img src="assets/connected-environments-illustrated-v12.png" width="1536" height="1024" alt="Conceptual room cutaway beside a pale outdoor scene with traffic exhaust, trees, distant buildings and sparse haze particles fading into transparency. Separate inward and outward airflow arrows pass through a sliding window beside an orange person seated at a laptop. A horizontal outdoor-air intake joins the rising room-return duct before air passes through the rooftop unit's filter, coil and fan. Supply and return grilles sit at the ceiling beneath their ducts. A portable air cleaner has a regular front intake grille, while an independent kitchen hood exhausts through the right side wall. The four captions below read Source, Transport, Exposure and Control.">
+      </figure>
+    </section>
+
+    <div class="opportunity wrap">
+      <p><span class="status-dot" aria-hidden="true"></span><strong>PhD opportunities</strong><span>August 2027 intake</span></p>
+      <a href="#join">Research with us <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <section class="section wrap about" id="about" aria-labelledby="about-title">
+      <h2 class="eyebrow" id="about-title">01 / Our focus</h2>
+      <div class="about-content">
+        <p>At the Healthy and Intelligent Environments (<span class="hie-wordmark">H<span class="hie-wordmark-i">i</span>E</span>) Lab, we connect built environment physics with human exposure. We combine experiments, environmental sensing, computational modelling and physics-assisted AI to develop and evaluate ventilation, cooling and pollution-control strategies.</p>
+        <p>Our research spans multiple scales, from people and rooms to buildings and their surroundings, with a focus on tropical conditions.</p>
+        <div class="principles">
+          <div><h3><span class="dot green" aria-hidden="true"></span>Healthy</h3><p>Cleaner air, lower exposure and thermal conditions that support comfort and well-being.</p></div>
+          <div><h3><span class="dot orange" aria-hidden="true"></span>Intelligent</h3><p>Reliable sensing and predictive models that support better design and adaptive operation.</p></div>
+          <div><h3><span class="dot blue" aria-hidden="true"></span>Resilient</h3><p>Low-energy strategies to maintain comfort and healthy indoor environments during extreme heat, haze and pandemics.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-band" id="research" aria-labelledby="research-title">
+      <div class="wrap section research-layout">
+        <h2 class="eyebrow" id="research-title">02 / Research Theme</h2>
+        <ol class="research-list">
+          <li>
+            <span class="theme-number" aria-hidden="true">01</span>
+            <div>
+              <h3>Multiscale Airflow &amp; Pollution Dynamics</h3>
+              <p>We investigate how unsteady airflow governs the movement, mixing, accumulation and removal of pollutants across the human breathing zone, rooms, buildings and their surroundings. Using particle image velocimetry (PIV), controlled experiments and computational fluid dynamics (CFD), we examine thermal plumes, turbulent transport and air exchange through building openings. This work connects physical mechanisms across scales to explain pollutant pathways and inform ventilation and building design.</p>
+            </div>
+          </li>
+          <li>
+            <span class="theme-number" aria-hidden="true">02</span>
+            <div>
+              <h3>Human Exposure &amp; Pollution Control</h3>
+              <p>We study how pollutant sources, indoor–outdoor exchange and people's location and activities shape exposure to particles, bioaerosols and gases. Laboratory experiments and field measurements help us relate environmental concentrations to exposure in homes, workplaces, kitchens and transport cabins. We evaluate source control, ventilation, portable air cleaners and HVAC filtration, focusing on how pollutant type, device placement and operating conditions affect their ability to reduce exposure.</p>
+            </div>
+          </li>
+          <li>
+            <span class="theme-number" aria-hidden="true">03</span>
+            <div>
+              <h3>Alternative Cooling &amp; Climate, Haze and Pandemic Resilience</h3>
+              <p>We investigate low-energy cooling through fans, radiant systems and natural or mixed-mode ventilation. Experiments, field studies and modelling help us assess trade-offs among thermal comfort, humidity, air quality and energy use in tropical conditions. We also explore how cooling, ventilation and filtration can work together during extreme heat, haze and pandemics, adapting operation to changing outdoor pollution and infection risks while maintaining comfortable, healthy indoor environments.</p>
+            </div>
+          </li>
+          <li>
+            <span class="theme-number" aria-hidden="true">04</span>
+            <div>
+              <h3>Trustworthy Sensing &amp; Predictive Control</h3>
+              <p>We evaluate sensor accuracy and performance across operating conditions, and connect measurements with physical models to support reliable environmental prediction. Our developing work explores data fusion, reduced-order and multi-fidelity modelling, and physics-assisted AI, with attention to validation and uncertainty. The aim is predictive control of ventilation, cooling and air cleaning that makes effective use of limited measurements and adapts to changing occupancy, weather and outdoor air quality.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section wrap projects" id="projects" aria-labelledby="projects-title">
+      <h2 class="eyebrow" id="projects-title">03 / Ongoing projects</h2>
+      <p class="projects-intro">Ongoing collaborations with UC Berkeley.</p>
+      <ul class="project-list">
+        <li>
+          <p class="project-funder">ASHRAE · 1918-RP</p>
+          <h3>Development of Evidence-Based Natural Ventilation Guidelines</h3>
+          <p class="project-description">Evaluating the performance and limitations of ventilation openings, air distribution and humidity conditions in naturally ventilated spaces.</p>
+          <a class="project-link" href="https://cbe.berkeley.edu/research/evidence-based-natural-ventilation-guidelines/" target="_blank" rel="noopener noreferrer">Project overview at UC Berkeley <span aria-hidden="true">↗</span></a>
+          <p class="project-status">Ongoing</p>
+        </li>
+        <li>
+          <p class="project-funder">California Air Resources Board (CARB)</p>
+          <h3>Air Cleaning for Indoor Gaseous Pollutants</h3>
+          <p class="project-description">Laboratory and community evaluation of advanced portable air cleaners and HVAC filters to assess their effectiveness in reducing indoor gaseous pollutants.</p>
+          <p class="project-status">Ongoing</p>
+        </li>
+        <li>
+          <p class="project-funder">Thirdhand Smoke Consortium</p>
+          <h3>Mapping Thirdhand Smoke in Homes</h3>
+          <p class="project-description">Computational fluid dynamics modelling of spatial variations in nicotine deposition and exposure in homes.</p>
+          <p class="project-status">Ongoing</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section wrap people" id="people" aria-labelledby="people-title">
+      <h2 class="eyebrow" id="people-title">04 / People</h2>
+      <div class="people-groups">
+        <div class="people-group">
+          <ul class="member-list">
+            <li><a class="member-card" href="people/jiayu-li.html">
+              <img class="member-photo" src="assets/jiayu-li.jpg" width="900" height="1200" alt="" loading="lazy">
+              <div><h3 class="member-name">Jiayu Li <span aria-hidden="true">→</span></h3><p class="member-role">Director</p><p class="member-affiliation">Assistant Professor<br>Department of the Built Environment, NUS</p></div>
+            </a></li>
+          </ul>
+        </div>
+        <div class="people-group">
+          <ul class="member-list">
+            <li>
+              <a class="member-card member-card-topics" href="https://cbe.berkeley.edu/about-us/people/chai-yoon-um/" target="_blank" rel="noopener noreferrer">
+                <img class="member-photo" src="assets/people/chai-um.jpg" width="600" height="800" alt="" loading="lazy">
+                <div>
+                  <h3 class="member-name">Chai Um <span aria-hidden="true">↗</span></h3>
+                  <p class="member-role">Postdoc (Remote)</p>
+                  <p class="member-affiliation">UC Berkeley</p>
+                  <ul class="member-topics" aria-label="Chai Um's research topics">
+                    <li>Mapping thirdhand smoke in homes</li>
+                    <li>Gas removal by portable air cleaners &amp; HVAC filters</li>
+                    <li>Kitchen air quality</li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="people-group people-group-wide">
+          <ul class="member-list student-list">
+            <li><div class="member-card">
+              <div><h3 class="member-name">Jianye Gao</h3><p class="member-role">Undergraduate student</p><p class="member-project">The Impact of Cooling Fans on Air Exchange in Buildings</p></div>
+            </div></li>
+            <li><div class="member-card">
+              <div><h3 class="member-name">Chua Hui Wen</h3><p class="member-role">Undergraduate student</p></div>
+            </div></li>
+            <li><div class="member-card">
+              <div><h3 class="member-name">Tan Jiayi</h3><p class="member-role">Undergraduate student</p></div>
+            </div></li>
+          </ul>
+        </div>
+        <section class="people-group people-group-wide" aria-labelledby="advisors-heading">
+          <h3 id="advisors-heading">Advisors</h3>
+          <ul class="member-list advisor-list">
+            <li><a class="member-card" href="https://cde.nus.edu.sg/dbe/wp-content/uploads/sites/26/2024/01/Staff-Resume-Prof-Sekhar.pdf" target="_blank" rel="noopener noreferrer" aria-label="Chandra Sekhar, NUS. Official profile (PDF)">
+              <img class="member-photo" src="assets/people/chandra-sekhar.jpg" width="500" height="500" alt="" loading="lazy">
+              <div><h4 class="member-name">Chandra Sekhar <span aria-hidden="true">↗</span></h4><p class="member-affiliation">NUS</p></div>
+            </a></li>
+            <li><a class="member-card" href="https://cde.nus.edu.sg/dbe/staff/tham-kwok-wai-dr/" target="_blank" rel="noopener noreferrer">
+              <img class="member-photo" src="assets/people/tham-kwok-wai.jpg" width="151" height="200" alt="" loading="lazy">
+              <div><h4 class="member-name">Tham Kwok Wai <span aria-hidden="true">↗</span></h4><p class="member-affiliation">NUS</p></div>
+            </a></li>
+            <li><a class="member-card" href="https://cbe.berkeley.edu/about-us/people/stefano-schiavon/" target="_blank" rel="noopener noreferrer">
+              <img class="member-photo" src="assets/people/stefano-schiavon.jpg" width="600" height="800" alt="" loading="lazy">
+              <div><h4 class="member-name">Stefano Schiavon <span aria-hidden="true">↗</span></h4><p class="member-affiliation">UC Berkeley</p></div>
+            </a></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="section wrap publications" id="publications" aria-labelledby="publications-title">
+      <div class="publications-heading">
+        <div><h2 class="eyebrow" id="publications-title">05 / Publications</h2><p class="publications-intro">Publications by Jiayu Li and collaborators, including work before <span class="hie-wordmark">H<span class="hie-wordmark-i">i</span>E</span> was established at NUS.</p></div>
+        <a class="text-link" href="https://scholar.google.com/citations?user=yG-ViIwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+      </div>
+      <div class="publication-controls" hidden>
+        <p class="filter-hint" id="publication-filter-hint">Select topics and methods to explore our work. You can select more than one in each group.</p>
+        <fieldset class="publication-filter-group" data-filter-group="topics">
+          <legend>Research topic</legend>
+          <div class="filter-buttons"><button type="button" class="filter-button" data-filter="all" aria-pressed="true" aria-controls="publication-list">All</button><button type="button" class="filter-button" data-filter="airflow" aria-pressed="false" aria-controls="publication-list">Airflow &amp; ventilation</button><button type="button" class="filter-button" data-filter="filtration" aria-pressed="false" aria-controls="publication-list">Air filtration &amp; cleaning</button><button type="button" class="filter-button" data-filter="cooling" aria-pressed="false" aria-controls="publication-list">Alternative cooling</button><button type="button" class="filter-button" data-filter="infection" aria-pressed="false" aria-controls="publication-list">Infection risk control</button><button type="button" class="filter-button" data-filter="exposure" aria-pressed="false" aria-controls="publication-list">Air quality &amp; exposure</button><button type="button" class="filter-button" data-filter="comfort" aria-pressed="false" aria-controls="publication-list">Thermal comfort</button><button type="button" class="filter-button" data-filter="sensing" aria-pressed="false" aria-controls="publication-list">Sensing &amp; intelligent control</button><button type="button" class="filter-button" data-filter="energy" aria-pressed="false" aria-controls="publication-list">Building energy</button></div>
+        </fieldset>
+        <fieldset class="publication-filter-group" data-filter-group="methods">
+          <legend>Research method</legend>
+          <div class="filter-buttons"><button type="button" class="filter-button" data-filter="all" aria-pressed="true" aria-controls="publication-list">All</button><button type="button" class="filter-button" data-filter="field" aria-pressed="false" aria-controls="publication-list">Field study</button><button type="button" class="filter-button" data-filter="chamber" aria-pressed="false" aria-controls="publication-list">Lab / chamber study</button><button type="button" class="filter-button" data-filter="simulation" aria-pressed="false" aria-controls="publication-list">Numerical simulation</button><button type="button" class="filter-button" data-filter="analysis" aria-pressed="false" aria-controls="publication-list">Data analysis &amp; modelling</button><button type="button" class="filter-button" data-filter="review" aria-pressed="false" aria-controls="publication-list">Review &amp; perspective</button></div>
+        </fieldset>
+        <div class="publication-toolbar">
+          <fieldset class="publication-type-filter" data-filter-group="type"><legend>Publication type</legend><div class="filter-buttons">
+            <button type="button" class="filter-button" data-filter="all" aria-pressed="true" aria-controls="publication-list">All types</button>
+            <button type="button" class="filter-button" data-filter="journal" aria-pressed="false" aria-controls="publication-list">Journal articles</button>
+            <button type="button" class="filter-button" data-filter="conference" aria-pressed="false" aria-controls="publication-list">Conference papers</button>
+          </div></fieldset>
+          <button type="button" class="filter-reset" id="publication-reset" disabled>Clear filters</button>
+        </div>
+        <p class="publication-count" id="publication-count" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+      <ol class="paper-list" id="publication-list" aria-label="Publications, newest first">
+        <li id="paper-j57" data-topics="cooling comfort" data-methods="review" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2026</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2026.115218" target="_blank" rel="noopener noreferrer">Ten questions concerning air movement as a primary cooling strategy: “Fan-first” cooling<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Tartarini, F.; Chong, A.; Cheung, T.; Jay, O.; Kent, M. G.; <strong>Li, J.</strong>; Lipczynska, A.; Mahdavi, A.; Pasut, W.; Popiolek, Z.; Raftery, P.; Ravanelli, N.; Taber, C.; Tham, K. W.; Wilkins, A. J.; &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Alternative cooling</span><span class="paper-tag">Thermal comfort</span><span class="paper-tag paper-tag-method">Review &amp; perspective</span></div>
+        </li>
+        <li id="paper-j56" data-topics="sensing exposure" data-methods="review" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2026</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2026.114737" target="_blank" rel="noopener noreferrer">Ten questions concerning low-cost indoor air quality sensors: perspectives from research and practice<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Parkinson, T.; Bhangar, S.; Chan, W. R.; Chen, W.; Gilligan, B.; Kramer, T.; <strong>Li, J.</strong>; Miller, C.; Oaks, L.; Thind, M.; Licina, D.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Review &amp; perspective</span></div>
+        </li>
+        <li id="paper-j55" data-topics="airflow exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2026</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2026.114676" target="_blank" rel="noopener noreferrer">Experimental study on airflow containment and pollutant capture of a push-pull ventilation system in residential kitchens<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Chen, W.; Yan, M.; Cui, Y.; Yu, Y.; Xu, J.; Liu, J.; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j54" data-topics="airflow filtration exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2026</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2026.114333" target="_blank" rel="noopener noreferrer">Influence of overhead HVAC and aerosol control strategies on coarse mode particle dispersion and exposure in a full-scale room experiment<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Um, C. Y.; Preble, C. V.; Zhao, H.; Delp, W. W.; Kirchstetter, T. W.; <strong>Li, J.</strong>; Schiavon, S.; &amp; Singer, B. C.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j53" data-topics="energy" data-methods="simulation analysis" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2026</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.crsus.2026.100682" target="_blank" rel="noopener noreferrer">BIPVs as an energy-resilient pathway for decarbonizing high-density island cities<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Liu, W.; Tian, Z.; Hu, M.; <strong>Li, J.</strong>; Ma, L.; &amp; Chen, X.</p>
+          <p class="paper-venue"><em>Cell Reports Sustainability</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Building energy</span><span class="paper-tag paper-tag-method">Numerical simulation</span><span class="paper-tag paper-tag-method">Data analysis &amp; modelling</span></div>
+        </li>
+        <li id="paper-j52" data-topics="airflow infection" data-methods="field simulation" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2026</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.53941/ubs.2026.100007" target="_blank" rel="noopener noreferrer">Mitigation of Airborne Disease Transmission and Particle Capture by Ceiling Fan Ventilation in Street Stores<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Han, X.; Qin, M.; <strong>Li, J.</strong>; Zhan, H.; Yuan, X.; &amp; Mahyuddin, N.</p>
+          <p class="paper-venue"><em>Urban and Building Science</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Infection risk control</span><span class="paper-tag paper-tag-method">Field study</span><span class="paper-tag paper-tag-method">Numerical simulation</span></div>
+        </li>
+        <li id="paper-c22" data-topics="filtration infection exposure" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2026</span><span>Conference paper</span></div>
+          <h3><a href="https://escholarship.org/uc/item/9j94q9nr" target="_blank" rel="noopener noreferrer">Evaluating Indoor Air Quality Impacts of Far-UVC (222 nm) in a Controlled Full-Scale Office Environment with Human Subjects<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Um, C. Y.; Russell, M.; Destaillats, H.; &amp; Singer, B. C.</p>
+          <p class="paper-venue"><em>Indoor Air 2026</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag">Infection risk control</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c21" data-topics="cooling" data-methods="simulation" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2026</span><span>Conference paper</span><span class="paper-award">Best Paper Award</span></div>
+          <h3><a href="https://doi.org/10.1051/e3sconf/202671602027" target="_blank" rel="noopener noreferrer">A simulation study on condensation risk in radiant cooling panels with elevated air movement<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Park, J.; Lee, S.; <strong>Li, J.</strong>; Chen, K. W.; Izuhara, I.; &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>E3S Web of Conferences · IAQVEC 2026</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Alternative cooling</span><span class="paper-tag paper-tag-method">Numerical simulation</span></div>
+        </li>
+        <li id="paper-j51" data-topics="exposure sensing" data-methods="field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2025</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.atmosenv.2025.121142" target="_blank" rel="noopener noreferrer">Analysis of time- and size-resolved fluorescent biological aerosol particles in a subway station<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Fan, Y.; Liu J.; Shang W.; &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Atmospheric Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j50" data-topics="energy sensing" data-methods="simulation analysis" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2025</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1007/s12273-024-1219-1" target="_blank" rel="noopener noreferrer">Day-ahead energy management of a smart building energy system aggregated with electrical vehicles based on distributionally robust optimization<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zhao B., Cao X., Zhang S., Ren J., <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Building Simulation</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Building energy</span><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag paper-tag-method">Numerical simulation</span><span class="paper-tag paper-tag-method">Data analysis &amp; modelling</span></div>
+        </li>
+        <li id="paper-j49" data-topics="energy" data-methods="review" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2025</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.59717/j.xinn-energy.2025.100091" target="_blank" rel="noopener noreferrer">Challenges of large-scale facade PV systems in dense urban environments in China<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Liu, W.; Mao, H.; Tian, Z.; Luo, Y.; Ma, L.; Chen, X.; Hu, M.; <strong>Li, J.</strong>; Fan, J.</p>
+          <p class="paper-venue"><em>The Innovation Energy</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Building energy</span><span class="paper-tag paper-tag-method">Review &amp; perspective</span></div>
+        </li>
+        <li id="paper-c20" data-topics="comfort sensing" data-methods="analysis" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2025</span><span>Conference paper</span></div>
+          <h3>Estimate indoor heat exposure from outdoor data in Singapore</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Chang, L.; Sanchez, L.; Cioni, L.; Kramer, T.; Yang, W.; Aijazi, A.; Kwong, L.; Sultan, Z.; &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>CLIMA 2025</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Thermal comfort</span><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag paper-tag-method">Data analysis &amp; modelling</span></div>
+        </li>
+        <li id="paper-j48" data-topics="filtration exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.indenv.2024.100047" target="_blank" rel="noopener noreferrer">Air Pollutant Exposure Concentrations from Cooking a Meal with a Gas or Induction Cooktop and the Effectiveness of Two Recirculating Range Hoods with Filters<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Zhao, H.; Russell, M.; Delp, W. W.; Johnson, A.; Tang, X.; Walker, I. S.; Singer B. C.</p>
+          <p class="paper-venue"><em>Indoor Environments</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j47" data-topics="comfort exposure" data-methods="review" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.3390/buildings14072001" target="_blank" rel="noopener noreferrer">A Review of In-Flight Thermal Comfort and Air Quality Status in Civil Aircraft Cabin Environments<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Wang, S.; Cao, X.; Miao, D.; Pang, L.; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Buildings</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Thermal comfort</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Review &amp; perspective</span></div>
+        </li>
+        <li id="paper-j46" data-topics="airflow infection" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.indenv.2024.100039" target="_blank" rel="noopener noreferrer">Should we use ceiling fans indoors to reduce the risk of transmission of infectious aerosols?<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Zuraimi, S.; &amp; Schiavon, S</p>
+          <p class="paper-venue"><em>Indoor Environments</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Infection risk control</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j45" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2024.111460" target="_blank" rel="noopener noreferrer">PIV experimental study on natural convective flows at high Rayleigh numbers in industrial buildings<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Liu, J.; Liu J.; &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j44" data-topics="filtration infection" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.indenv.2024.100042" target="_blank" rel="noopener noreferrer">Effectiveness of Triethylene Glycol Disinfection on Airborne MS2 Bacteriophage under Diverse Building Operational Parameters<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zuraimi, S.; Luhung, I.; Aung, N. W.; Uchida, A.; Natarajan, A.; Puramadathil, S.; <strong>Li, J.</strong>; Schuster, S.; &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>Indoor Environments</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag">Infection risk control</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j43" data-topics="infection" data-methods="field analysis" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2024.111909" target="_blank" rel="noopener noreferrer">A Case-Control Study of Behavioural and Built Environment Determinants of COVID-19 Transmission in Open-Air Markets and Food Centres in Singapore<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Yang, J.; Unni, B.; Yap, R.; Lim, J.T.; Nazeem, M.; Shen, J.; Ng, L.C.; &amp; Sim, S.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Infection risk control</span><span class="paper-tag paper-tag-method">Field study</span><span class="paper-tag paper-tag-method">Data analysis &amp; modelling</span></div>
+        </li>
+        <li id="paper-j42" data-topics="exposure" data-methods="field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.scitotenv.2024.172126" target="_blank" rel="noopener noreferrer">Particle characterization in commercial buildings: A cross-sectional study in 40 offices in Singapore<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zuraimi, S.; <strong>Li, J.</strong>; Pantelic, J.; &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>Science of the Total Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j41" data-topics="cooling comfort energy" data-methods="field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.enbuild.2024.114487" target="_blank" rel="noopener noreferrer">Comparison of the environmental, energy, and thermal comfort performance of air and radiant cooling systems in a zero-energy office building in Singapore<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Pantelic, J.; Merchant, C. B.; Chen, K. W.; Izuhara, I.; Yuki, R.; Meggers, F. M.; &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>Energy and Buildings</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Alternative cooling</span><span class="paper-tag">Thermal comfort</span><span class="paper-tag">Building energy</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-c19" data-topics="exposure comfort energy" data-methods="field" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Conference paper</span></div>
+          <h3>Characterizing indoor environment quality and energy efficiency improvement opportunities in U.S. commercial kitchens</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Chan W. R.; Singer B. C.; Schiavon, S.; Bell, T. &amp; Young, R.</p>
+          <p class="paper-venue"><em>Indoor Air 2024</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag">Thermal comfort</span><span class="paper-tag">Building energy</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-c18" data-topics="airflow infection" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Conference paper</span></div>
+          <h3>Should we use ceiling fans indoors to reduce the risk of transmission of infectious aerosols?</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Zuraimi, S.; &amp; Schiavon, S</p>
+          <p class="paper-venue"><em>Indoor Air 2024</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Infection risk control</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c17" data-topics="infection" data-methods="field analysis" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2024</span><span>Conference paper</span></div>
+          <h3>A Case-Control Study of Behavioural and Built Environment Determinants of COVID-19 Transmission in Open-Air Markets and Food Centres in Singapore</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Yang, J.; Unni, B.; Yap, R.; Lim, J.T.; Nazeem, M.; Shen, J.; Ng, L.C.; &amp; Sim, S.</p>
+          <p class="paper-venue"><em>Healthy Buildings Europe 2023</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Infection risk control</span><span class="paper-tag paper-tag-method">Field study</span><span class="paper-tag paper-tag-method">Data analysis &amp; modelling</span></div>
+        </li>
+        <li id="paper-j40" data-topics="cooling comfort energy" data-methods="field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2023</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2023.110674" target="_blank" rel="noopener noreferrer">Energy savings and thermal comfort in a zero energy office building with fans in Singapore<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Kent, M.; Huynh, N. K.; Mishra, A. K.; Tartarini, F.; Lipczynska, A.; <strong>Li, J.</strong>; ... &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Alternative cooling</span><span class="paper-tag">Thermal comfort</span><span class="paper-tag">Building energy</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j39" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2023</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1063/5.0159621" target="_blank" rel="noopener noreferrer">Turbulence characterization of instantaneous airflow above passengers with different air distribution systems in a commercial airliner cabin<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Liu, M.; <strong>Li, J.</strong>; Liu, J.; &amp; Hassan, M. A.</p>
+          <p class="paper-venue"><em>Physics of Fluids</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j38" data-topics="filtration sensing energy" data-methods="simulation analysis" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2023</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2023.110556" target="_blank" rel="noopener noreferrer">Developing smart air purifier control strategies for better IAQ and energy efficiency using reinforcement learning<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Shang, W.; Liu, J.; Wang, C.; <strong>Li, J.</strong>; &amp; Dai, X.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag">Building energy</span><span class="paper-tag paper-tag-method">Numerical simulation</span><span class="paper-tag paper-tag-method">Data analysis &amp; modelling</span></div>
+        </li>
+        <li id="paper-c16" data-topics="airflow infection" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2023</span><span>Conference paper</span></div>
+          <h3><a href="https://www.ukaachen.de/fileadmin/files/sonstige/hb2023-europe/BookOfAbstracts_Full_v1.pdf" target="_blank" rel="noopener noreferrer">Comparing the mitigation effects of fan configuration and operation on indoor airborne transmission risk<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Yang, F.; Cheung, T.; <strong>Li, J.</strong> &amp; Tham, K. W.</p>
+          <p class="paper-venue"><em>Healthy Buildings Europe 2023</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Infection risk control</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j37" data-topics="airflow infection" data-methods="field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2022</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2022.109640" target="_blank" rel="noopener noreferrer">Evaluation of aerosol transmission risk during home quarantine under different operating scenarios: A pilot study<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Cheung, T.; <strong>Li, J.</strong>; Goh, J.; Sekhar, C.; Cheong, D.; &amp; Tham, K.W.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Infection risk control</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j36" data-topics="exposure sensing" data-methods="field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2022</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.scitotenv.2022.157811" target="_blank" rel="noopener noreferrer">Diurnal trends of indoor and outdoor fluorescent biological aerosol particles in a tropical urban area<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Zuraimi, S.; Schiavon, S.; Wan, M.P.; Xiong, J. &amp; Tham, K.W.</p>
+          <p class="paper-venue"><em>Science of the Total Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j35" data-topics="filtration exposure" data-methods="field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2022</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.4209/aaqr.220204" target="_blank" rel="noopener noreferrer">Indoor air pollution of outdoor origin: mitigation using portable air cleaners in Singapore office building<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zuraimi, S.; <strong>Li, J.</strong>; Pantelic, J.; &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>Aerosol and Air Quality Research</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j34" data-topics="cooling energy" data-methods="simulation analysis" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2022</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.enbuild.2022.112199" target="_blank" rel="noopener noreferrer">A revised radiant time series method (RTSM) to calculate the cooling load for pipe-embedded radiant systems<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Ning, B.; Zhang, M.; <strong>Li, J.</strong> &amp; Chen, Y.</p>
+          <p class="paper-venue"><em>Energy and Buildings</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Alternative cooling</span><span class="paper-tag">Building energy</span><span class="paper-tag paper-tag-method">Numerical simulation</span><span class="paper-tag paper-tag-method">Data analysis &amp; modelling</span></div>
+        </li>
+        <li id="paper-j33" data-topics="filtration" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2022</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.jclepro.2022.131997" target="_blank" rel="noopener noreferrer">A holistic performance assessment of duct-type electrostatic precipitators<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Wang, P.; Liu, J.; Wang, C.; Zhang, Z. &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Journal of Cleaner Production</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j31" data-topics="airflow exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2022</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2021.108444" target="_blank" rel="noopener noreferrer">Experimental research on the impact of annular airflow on the spraying flow field: a source control technology of paint mist<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Wang, Q.; Liu J.; Liu, J.; &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j32" data-topics="exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2021</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.3390/atmos12121669" target="_blank" rel="noopener noreferrer">A method to generate experimental aerosol with similar particle size distribution to atmospheric aerosol<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Ren, J.; He, J.; <strong>Li, J.</strong> &amp; Liu, J.</p>
+          <p class="paper-venue"><em>Atmosphere</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j30" data-topics="exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2021</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2021.108705" target="_blank" rel="noopener noreferrer">Size-resolved splashed cooking oil droplets from 1 to 1000 μm on surfaces: the impact of residential range hoods<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Wang, P.; Liu S.; Liu, J.; Wang, J.; &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j29" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2021</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.applthermaleng.2021.116590" target="_blank" rel="noopener noreferrer">Assessment of a confined thermal plume by PIV combined with POD analysis<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Chen, W.; Liu, J.; <strong>Li, J.</strong>; Dai, X.; Wang, P.; &amp; Wang, C.</p>
+          <p class="paper-venue"><em>Applied Thermal Engineering</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j27" data-topics="airflow exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2021</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1080/23744731.2020.1849795" target="_blank" rel="noopener noreferrer">Experimental study of the impact of passenger behavior on the aircraft cabin environment<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zhang, Y.; <strong>Li, J.</strong>; &amp; Liu, J.</p>
+          <p class="paper-venue"><em>Science and Technology for the Built Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j28" data-topics="exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2020</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1021/acs.est.0c03850" target="_blank" rel="noopener noreferrer">Impact of Cognitive Tasks on CO2 and Isoprene Emissions from Humans<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Gall, E. T.; Mishra, A. K.; <strong>Li, J.</strong>; Schiavon, S.; &amp; Laguerre, A.</p>
+          <p class="paper-venue"><em>Environmental Science &amp; Technology</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j26" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2020</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2020.107224" target="_blank" rel="noopener noreferrer">Experimental investigation of large-scale flow structures in an aircraft cabin mock-up<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zhang, Y.; <strong>Li, J.</strong>; Liu, M.; Liu, J.; &amp; Wang, C.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j25" data-topics="cooling" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2020</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2020.107060" target="_blank" rel="noopener noreferrer">Experimental evaluation of visual flicker caused by ceiling fans<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Kent, M. G.; Cheung, T.; <strong>Li, J.</strong>; &amp; Schiavon, S.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Alternative cooling</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j24" data-topics="exposure" data-methods="analysis" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2020</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.4209/aaqr.2020.06.0303" target="_blank" rel="noopener noreferrer">Changes in air quality during the COVID-19 lockdown in Singapore and associations with human mobility trends<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; &amp; Tartarini, F.</p>
+          <p class="paper-venue"><em>Aerosol and Air Quality Research</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Data analysis &amp; modelling</span></div>
+        </li>
+        <li id="paper-j23" data-topics="exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2020</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2020.106973" target="_blank" rel="noopener noreferrer">Experimental study on particle splash pollution from cooking with fluorescent droplets<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Kong, L.; Liu, J.; Ren, J.; Liu, S.; <strong>Li, J.</strong> &amp; Wang, J.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j22" data-topics="exposure sensing" data-methods="field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2020</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1111/ina.12678" target="_blank" rel="noopener noreferrer">Size‐resolved dynamics of indoor and outdoor fluorescent biological aerosol particles in a bedroom: A one‐month case study in Singapore<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Wan, M.P.; Schiavon, S.; Tham, K.W.; Zuraimi, S.; Xiong, J.; Fang, M. &amp; Gall, E.</p>
+          <p class="paper-venue"><em>Indoor Air</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-c15" data-topics="exposure sensing" data-methods="field" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2020</span><span>Conference paper</span></div>
+          <h3>Diurnal trends of indoor and outdoor fluorescent biological aerosol particles in Singapore</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Zuraimi, S.; Schiavon, S.; Wan, M.P.; Xiong J.; &amp; Tham K.W.</p>
+          <p class="paper-venue"><em>Indoor Air 2020</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-c14" data-topics="exposure" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2020</span><span>Conference paper</span></div>
+          <h3>Psychological stress increases human bioeffluent emissions: an experimental assessment</h3>
+          <p class="paper-authors">Gall, E.T.; Mishra, A.K.; <strong>Li, J.</strong>; Schiavon, S.; Laguerre, A.</p>
+          <p class="paper-venue"><em>Indoor Air 2020</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c13" data-topics="exposure sensing" data-methods="field" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2019</span><span>Conference paper</span></div>
+          <h3>WIBS study of indoor and outdoor bioaerosols of a natural ventilated bedroom in Singapore</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Wan, M.P.; Schiavon, S.; Tham, K.W.; Zuraimi, S.; Xiong, J.; Gall, E.</p>
+          <p class="paper-venue"><em>Healthy Buildings 2019 Asia and Pacific Rim</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag">Sensing &amp; intelligent control</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j21" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2018</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.ijheatmasstransfer.2018.07.138" target="_blank" rel="noopener noreferrer">Experimental study of human thermal plumes in a small space via large-scale TR PIV system<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Liu, J.; Pei, J.; Mohanarangam, K.; &amp; Yang, W.</p>
+          <p class="paper-venue"><em>International Journal of Heat and Mass Transfer</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j20" data-topics="airflow" data-methods="chamber simulation" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2018</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2018.08.017" target="_blank" rel="noopener noreferrer">Experimental and numerical study of space station airflow distribution under microgravity condition<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Wang, C.; Liu, J.; Shang, W.; Sun, H.; <strong>Li, J.</strong>; &amp; Fan, F.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span><span class="paper-tag paper-tag-method">Numerical simulation</span></div>
+        </li>
+        <li id="paper-j19" data-topics="airflow exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2018</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.enbuild.2018.07.051" target="_blank" rel="noopener noreferrer">2D-PIV measurement of range hood-driven flow in a domestic kitchen<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Chen, W.; <strong>Li, J.</strong>; Wang, C.; Dai, X.; &amp; Liu, J.</p>
+          <p class="paper-venue"><em>Energy and Buildings</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j18" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2018</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2018.08.031" target="_blank" rel="noopener noreferrer">PIV measurement of human thermal convection flow in a simplified vehicle cabin<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Cao, X.; Liu, J.; Mohanarangam, K.; &amp; Yang, W.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j17" data-topics="comfort exposure" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2018</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2018.01.009" target="_blank" rel="noopener noreferrer">Evaluation of relative weights for temperature, CO2, and noise in the aircraft cabin environment<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Jia, S.; Lai, D.; Kang, J.; <strong>Li, J.</strong>; &amp; Liu, J.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Thermal comfort</span><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j16" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2018</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2018.04.023" target="_blank" rel="noopener noreferrer">PIV experimental research on gasper jets interacting with the main ventilation in an aircraft cabin<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Liu, J.; Dai, S.; Guo, Y.; Jiang, N.; &amp; Yang, W.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j15" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2018</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.ijheatmasstransfer.2017.11.059" target="_blank" rel="noopener noreferrer">Chaotic behavior of human thermal plumes in an aircraft cabin mockup<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Wang, C.; Liu, J.; <strong>Li, J.</strong>; &amp; Li, F.</p>
+          <p class="paper-venue"><em>International Journal of Heat and Mass Transfer</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c12" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2018</span><span>Conference paper</span></div>
+          <h3>Experimental study of human thermal plumes in a small space via large-scale TR PIV system</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Liu, J, Pei, J.; Mohanarangam, K.; Yang, W.; Li, B. &amp; Cao, Y.</p>
+          <p class="paper-venue"><em>Indoor Air 2018</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j14" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2017</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.ast.2017.08.009" target="_blank" rel="noopener noreferrer">Performance evaluation of different air distribution systems in an aircraft cabin mockup<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zhang, Y.; Liu, J.; Pei, J.; <strong>Li, J.</strong>; &amp; Wang, C.</p>
+          <p class="paper-venue"><em>Aerospace Science and Technology</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j13" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2017</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2017.07.043" target="_blank" rel="noopener noreferrer">PIV experimental study of the large-scale dynamic airflow structures in an aircraft cabin: Swing and oscillation<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Liu, J.; Wang, C.; Wesseling, M.; &amp; Müller, D.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j12" data-topics="airflow" data-methods="chamber field" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2017</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2016.10.017" target="_blank" rel="noopener noreferrer">Ventilation similarity of an aircraft cabin mockup with a real MD-82 commercial airliner<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Chen, W.; Liu, J.; Li, F.; Cao, X.; <strong>Li, J.</strong>; Zhu, X.; &amp; Chen, Q.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j11" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2017</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2017.02.015" target="_blank" rel="noopener noreferrer">Turbulence characterization of instantaneous airflow in an aisle of an aircraft cabin mockup<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Wang, C.; Liu, J.; <strong>Li, J.</strong>; Guo, Y.; &amp; Jiang, N.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j10" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2017</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1007/s12650-016-0404-4" target="_blank" rel="noopener noreferrer">PIV methods for quantifying human thermal plumes in a cabin environment without ventilation<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Liu, J.; Wang, C.; Jiang, N.; &amp; Cao, X.</p>
+          <p class="paper-venue"><em>Journal of Visualization</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j9" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2016</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2016.01.018" target="_blank" rel="noopener noreferrer">2D-PIV measurement of isothermal air jets from a multi-slot diffuser in aircraft cabin environment<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Cao, X.; <strong>Li, J.</strong>; Liu, J.; &amp; Yang, W.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j8" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2016</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.enbuild.2016.06.039" target="_blank" rel="noopener noreferrer">Experimental study of transient air distribution of a jet collision region in an aircraft cabin mock-up<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Liu, J.; Cao, X.; &amp; Jiang, N.</p>
+          <p class="paper-venue"><em>Energy and Buildings</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j7" data-topics="airflow filtration" data-methods="simulation" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2016</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1007/s12273-016-0281-8" target="_blank" rel="noopener noreferrer">Window purifying ventilator using a cross-flow fan: Simulation and optimization<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Hou, Y.; Liu, J.; Wang, Z.; &amp; Li, F.</p>
+          <p class="paper-venue"><em>Building Simulation</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag paper-tag-method">Numerical simulation</span></div>
+        </li>
+        <li id="paper-j6" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2016</span><span>Journal article</span></div>
+          <h3><a href="http://www.cnki.net/kcms/detail/12.1127.N.20151124.1015.010.html" target="_blank" rel="noopener noreferrer">Experimental research on the influence of natural convection on the flow field in the cabin mockup<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Liu, J.; Zhu, X.; Cao, X.; <strong>Li, J.</strong>; &amp; Sun, H.</p>
+          <p class="paper-venue"><em>Journal of Tianjin University (Science and Technology)</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c11" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2016</span><span>Conference paper</span></div>
+          <h3>PIV Experimental study of pure thermal plumes in an aircraft cabin mock-up</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Liu, J.; Wang, C.; &amp; Zhao, L.</p>
+          <p class="paper-venue"><em>IAQVEC 2016</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c10" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2016</span><span>Conference paper</span></div>
+          <h3>Experimental investigations on the gasper jet inside a 7-row aircraft cabin mockup</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Dai, S.; &amp; Liu, J.</p>
+          <p class="paper-venue"><em>Indoor Air 2016</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j5" data-topics="airflow comfort" data-methods="simulation" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2015.11.004" target="_blank" rel="noopener noreferrer">Evaluation of different air distribution systems for sleeping spaces in transport vehicles<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zhang, Y.; <strong>Li, J.</strong>; Sun, H.; Liu, J.; &amp; Chen, Q.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Thermal comfort</span><span class="paper-tag paper-tag-method">Numerical simulation</span></div>
+        </li>
+        <li id="paper-j2" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2015.06.030" target="_blank" rel="noopener noreferrer">Global airflow field distribution in a cabin mock-up measured via large-scale 2D-PIV<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Cao, X.; Liu, J.; Wang, C.; &amp; Zhang, Y.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c9" data-topics="airflow filtration comfort" data-methods="simulation" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Conference paper</span></div>
+          <h3>Effect of Window Filtration Ventilator on Indoor Thermal Comfort and Air Quality</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Hou, Y.; &amp; Liu, J.</p>
+          <p class="paper-venue"><em>Building Simulation 2015</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag">Air filtration &amp; cleaning</span><span class="paper-tag">Thermal comfort</span><span class="paper-tag paper-tag-method">Numerical simulation</span></div>
+        </li>
+        <li id="paper-c8" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Conference paper</span></div>
+          <h3>Study of Isothermal Air Jets from a linear Slot Diffuser in an Aircraft Cabin Mockup with 2D-PIV</h3>
+          <p class="paper-authors">Cao, X.; Liu, J.; <strong>Li, J.</strong>; &amp; Yang, W.</p>
+          <p class="paper-venue"><em>ISHVAC–COBEE 2015</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c7" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Conference paper</span></div>
+          <h3>Experimental investigation of thermal plume impact on airflow in cabin mockup</h3>
+          <p class="paper-authors">Zhang, Y.; Liu, J.; Wang, C.; &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>ISHVAC–COBEE 2015</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c5" data-topics="airflow" data-methods="chamber field" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Conference paper</span></div>
+          <h3>Experimental Data Comparison of Air Distributions in the 7-ROW Cabin Mockup and the MD-82 Aircraft Cabin</h3>
+          <p class="paper-authors">Chen, W.; Zhu, X.; Cao, X.; <strong>Li, J.</strong>; &amp; Liu, J.</p>
+          <p class="paper-venue"><em>ISHVAC–COBEE 2015</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j4" data-topics="exposure" data-methods="field" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Conference paper</span></div>
+          <h3><a href="https://doi.org/10.1016/j.proeng.2015.09.037" target="_blank" rel="noopener noreferrer">Investigation of Indoor Air Quality in Primary School Classrooms<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Hou, Y.; Liu, J.; &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Procedia Engineering</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Air quality &amp; exposure</span><span class="paper-tag paper-tag-method">Field study</span></div>
+        </li>
+        <li id="paper-j3" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Conference paper</span></div>
+          <h3><a href="https://doi.org/10.1016/j.proeng.2015.09.041" target="_blank" rel="noopener noreferrer">2D-PIV experimental study on the air distribution with natural convection effect of passengers in an air cabin mockup<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Zhu, X.; Liu, J.; Cao, X.; &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Procedia Engineering</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c3" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2015</span><span>Conference paper</span></div>
+          <h3>Experimental Study of Transient Air Distribution of Jets Collision Region in an Aircraft Cabin Mock-up</h3>
+          <p class="paper-authors"><strong>Li, J.</strong>; Liu, J.; Yao, S.; &amp; Cao, X.</p>
+          <p class="paper-venue"><em>ISHVAC–COBEE 2015</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-j1" data-topics="airflow" data-methods="chamber" data-type="journal" tabindex="-1">
+          <div class="paper-meta"><span>2014</span><span>Journal article</span></div>
+          <h3><a href="https://doi.org/10.1016/j.buildenv.2014.07.027" target="_blank" rel="noopener noreferrer">2D-PIV measurement of aircraft cabin air distribution with a high spatial resolution<span aria-hidden="true">↗</span></a></h3>
+          <p class="paper-authors">Cao, X.; Liu, J.; Pei, J.; Zhang, Y.; <strong>Li, J.</strong>; &amp; Zhu, X.</p>
+          <p class="paper-venue"><em>Building and Environment</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c2" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2014</span><span>Conference paper</span></div>
+          <h3>PIV Measurement of Horizontal Airflows along the Aisle of an Aircraft Cabin</h3>
+          <p class="paper-authors">Cao, X.; Liu, J.; &amp; <strong>Li, J.</strong>; Wang, C.</p>
+          <p class="paper-venue"><em>ROOMVENT 2014</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+        <li id="paper-c1" data-topics="airflow" data-methods="chamber" data-type="conference" tabindex="-1">
+          <div class="paper-meta"><span>2014</span><span>Conference paper</span></div>
+          <h3>High Power 2D-PIV Application in the Measurement of Air Distribution in an Aircraft Cabin Mockup</h3>
+          <p class="paper-authors">Cao, X.; Liu, J.; Yun Zhang, &amp; <strong>Li, J.</strong></p>
+          <p class="paper-venue"><em>Indoor Air 2014</em></p>
+          <div class="paper-tags" aria-label="Research topics and methods"><span class="paper-tag">Airflow &amp; ventilation</span><span class="paper-tag paper-tag-method">Lab / chamber study</span></div>
+        </li>
+      </ol>
+      <p class="publication-empty" id="publication-empty" hidden>No publications match this combination. Try another topic or method, or clear the filters.</p>
+      <div class="publication-more" hidden>
+        <button type="button" class="button" id="publication-more" aria-controls="publication-list">Show more <span aria-hidden="true">↓</span></button>
+        <button type="button" class="filter-reset" id="publication-all" aria-controls="publication-list">Show all results</button>
+      </div>
+    </section>
+
+    <section class="section wrap partners" id="partners" aria-labelledby="partners-title">
+      <h2 class="eyebrow" id="partners-title">06 / Partners &amp; Collaborators</h2>
+      <p class="partners-intro">Collaborations across current and prior appointments.</p>
+      <ul class="partner-list">
+        <li><a class="partner-link" href="https://www.nea.gov.sg/" target="_blank" rel="noopener noreferrer" aria-label="National Environment Agency official website">
+          <span class="partner-mark"><img src="assets/partners/nea.png" width="218" height="83" alt="National Environment Agency" loading="lazy"></span>
+          <span class="partner-name">NEA <span aria-hidden="true">↗</span></span>
+        </a></li>
+        <li><a class="partner-link" href="https://www.berkeley.edu/" target="_blank" rel="noopener noreferrer" aria-label="UC Berkeley official website">
+          <span class="partner-mark partner-mark-reverse"><img src="assets/partners/uc-berkeley.png" width="800" height="150" alt="UC Berkeley" loading="lazy"></span>
+          <span class="partner-name">UC Berkeley <span aria-hidden="true">↗</span></span>
+        </a></li>
+        <li><a class="partner-link" href="https://www.kajima.co.jp/english/" target="_blank" rel="noopener noreferrer" aria-label="Kajima official website">
+          <span class="partner-mark"><img src="assets/partners/kajima.svg" width="140" height="44" alt="Kajima" loading="lazy"></span>
+          <span class="partner-name">Kajima <span aria-hidden="true">↗</span></span>
+        </a></li>
+        <li><a class="partner-link" href="https://www.fotile.com/" target="_blank" rel="noopener noreferrer" aria-label="FOTILE official website">
+          <span class="partner-mark"><img src="assets/partners/fotile.png" width="450" height="80" alt="FOTILE" loading="lazy"></span>
+          <span class="partner-name">FOTILE <span aria-hidden="true">↗</span></span>
+        </a></li>
+      </ul>
+    </section>
+
+    <section class="join-band" id="join" aria-labelledby="join-title">
+      <div class="wrap join-layout">
+        <div><p class="eyebrow">07 / Join <span class="hie-wordmark">H<span class="hie-wordmark-i">i</span>E</span></p><h2 id="join-title">Good questions.<br>Better environments.</h2><p class="join-intro">We welcome curious researchers who want to connect physical understanding with practical environmental improvements.</p></div>
+        <div class="join-content"><p class="opening">PhD opportunities · August 2027</p><h3>1–2 fully funded positions</h3><p>We welcome applicants from building science, mechanical and environmental engineering, fluid mechanics, energy, sensing, computation and related fields.</p><p>Send your CV, academic transcripts and a short statement of research interests to Jiayu. Funding covers tuition fees and a living stipend, subject to NUS admission and scholarship procedures.</p><a class="contact-link" href="mailto:jy.li@nus.edu.sg?subject=HiE%20PhD%202027%20%E2%80%93%20Name%20%E2%80%93%20Institution">jy.li@nus.edu.sg <span aria-hidden="true">↗</span></a><div class="join-links"><a href="https://cde.nus.edu.sg/graduate/graduate-programmes-by-research/how-to-apply/" target="_blank" rel="noopener noreferrer">NUS application guidance ↗</a></div><p class="collaboration-note">Interested in a research visit or collaboration? We would be glad to hear about your ideas.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="footer-identity"><img src="assets/hie-logo.svg" width="1292" height="626" alt="HiE Lab"><div><p>Healthy and Intelligent<br>Environments Lab</p><p lang="zh-Hans">健康与智慧环境实验室</p></div></div>
+    <div class="footer-affiliation"><a href="https://nus.edu.sg/" aria-label="National University of Singapore"><img src="assets/nus-logo.svg" width="616" height="325" alt="National University of Singapore" loading="lazy"></a><p>Department of the Built Environment<br>College of Design and Engineering<br>National University of Singapore</p></div>
+    <div class="footer-bottom"><p>© <span id="year">2026</span> <span class="hie-wordmark">H<span class="hie-wordmark-i">i</span>E</span> Lab</p><a href="#top">Back to top ↑</a></div>
+  </footer>
+</body>
+</html>
